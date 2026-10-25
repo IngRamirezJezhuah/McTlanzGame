@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://blxc3wkn2201"]
+
+[ext_resource type="Script" uid="uid://67du1w22b8w6" path="res://Scripts/rythm_lvl_recorder.gd" id="1_780f2"]
+[ext_resource type="Texture2D" uid="uid://cgpuv2tx6rvhh" path="res://icon.svg" id="1_uqaf5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oobrl"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1h5w"]
+size = Vector2(1145, 205)
+
+[node name="LevelEditor" type="Node2D" unique_id=1084586378]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1275379497]
+script = ExtResource("1_780f2")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=364223171]
+texture = ExtResource("1_uqaf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1493880650]
+shape = SubResource("RectangleShape2D_oobrl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1973484580]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1762082496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=710738498]
+position = Vector2(-2.5, 215.5)
+shape = SubResource("RectangleShape2D_u1h5w")
