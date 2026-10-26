@@ -120,17 +120,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gp8j"]
-size = Vector2(29, 21)
+size = Vector2(25, 20)
 
 [node name="Character" type="CharacterBody2D" unique_id=1822747746 node_paths=PackedStringArray("animation")]
 script = ExtResource("1_cuyo6")
 animation = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1450226678]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_cuyo6")
-animation = &"jump"
-frame_progress = 0.78204846
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1327998315]
-position = Vector2(-0.5, 5.5)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_1gp8j")

@@ -1,14 +1,25 @@
 extends CharacterBody2D
 
-@export var animation: AnimatedSprite2D
+# ===============
+#   Vairables
+# ===============
+
+@export var animation: AnimatedSprite2D 
 var _speed: float = 100.0
 var _jump_speed = -200.0
 
+# ================== 
+#     Funciones
+# ==================
+
 func _physics_process(delta):
-	#gravity
+	# =====================
+	#      gravity
+	# =====================
 	velocity += get_gravity() * delta
-	
-	#lateral movement 
+	# ====================
+	#   movimiento lateral
+	# ====================
 	if Input.is_action_pressed("rigth"):
 		animation.flip_h = false
 		velocity.x = _speed
@@ -17,12 +28,16 @@ func _physics_process(delta):
 		velocity.x = -_speed
 	else:
 		velocity.x = 0
-	
-	#Horizontal movement 
+	# ============================
+	# Movimiento en Horizontal 
+	# ============================
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y =_jump_speed
+	
 		
-	#animation
+	# =======================
+	#  apartado de animacion
+	# =======================
 	if !is_on_floor():
 		animation.play("jump")
 	elif velocity.x != 0:
