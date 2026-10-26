@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://drl3xb1mc6igo"]
+
+[ext_resource type="PackedScene" uid="uid://dus6nonjh5458" path="res://scenes/character/character.tscn" id="2_coqi1"]
+[ext_resource type="Texture2D" uid="uid://de5e47f4awp6g" path="res://Assets/NieR-Automata-Engels.jpg" id="2_yjk5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gp8j"]
+size = Vector2(248, 16)
+
+[node name="Scene" type="Node2D" unique_id=691871752]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1165165254]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1549753553]
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=461760318]
+position = Vector2(0, -116)
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1451906008]
+position = Vector2(-117, -68)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1100003251]
+position = Vector2(127, -74)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="Character" parent="." unique_id=1822747746 instance=ExtResource("2_coqi1")]
+position = Vector2(1, -33)
+
+[node name="Camera2D" type="Camera2D" parent="Character" unique_id=1612793087]
+position = Vector2(-1, -23.43)
+zoom = Vector2(4.815, 5.34)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1981712680]
+z_index = -1
+position = Vector2(-3, -73)
+scale = Vector2(0.48611107, 0.26311725)
+texture = ExtResource("2_yjk5s")
