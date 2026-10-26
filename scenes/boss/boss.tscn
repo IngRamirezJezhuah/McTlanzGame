@@ -15,26 +15,26 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pi5kt"]
-radius = 57.0
-height = 154.0
+radius = 24.0
+height = 66.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gchkv"]
-radius = 140.07141
+radius = 45.01111
 
 [node name="Boss" type="CharacterBody2D" unique_id=232252331]
 script = ExtResource("1_6xxrv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1198674867]
-position = Vector2(7.6293945e-06, 1.0000076)
-scale = Vector2(0.674074, 0.53194445)
+position = Vector2(0, 1)
+scale = Vector2(0.23629631, 0.1833449)
 sprite_frames = SubResource("SpriteFrames_gchkv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=182395732]
-position = Vector2(5, -92)
+position = Vector2(3, -36)
 shape = SubResource("CapsuleShape2D_pi5kt")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1724292446]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=811439911]
-position = Vector2(-1, -78)
+position = Vector2(3, -36)
 shape = SubResource("CircleShape2D_gchkv")

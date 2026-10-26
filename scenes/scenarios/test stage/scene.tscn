@@ -2,11 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dus6nonjh5458" path="res://scenes/character/character.tscn" id="2_coqi1"]
 [ext_resource type="Texture2D" uid="uid://de5e47f4awp6g" path="res://Assets/NieR-Automata-Engels.jpg" id="2_yjk5s"]
+[ext_resource type="PackedScene" uid="uid://c15g00payv1i2" path="res://scenes/boss/boss.tscn" id="3_coqi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gp8j"]
 size = Vector2(543, 16)
 
 [node name="Scene" type="Node2D" unique_id=691871752]
+
+[node name="Boss" parent="." unique_id=232252331 instance=ExtResource("3_coqi1")]
+position = Vector2(0, -56)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1165165254]
 
@@ -39,6 +43,6 @@ zoom = Vector2(4.815, 5.34)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1981712680]
 z_index = -1
 texture_filter = 1
-position = Vector2(-3, -73)
+position = Vector2(15.000002, -73)
 scale = Vector2(0.48611107, 0.26311725)
 texture = ExtResource("2_yjk5s")

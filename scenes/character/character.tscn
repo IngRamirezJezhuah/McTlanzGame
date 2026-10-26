@@ -122,7 +122,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gp8j"]
 size = Vector2(25, 20)
 
-[node name="Character" type="CharacterBody2D" unique_id=1822747746 node_paths=PackedStringArray("animation")]
+[node name="Character" type="CharacterBody2D" unique_id=1822747746 node_paths=PackedStringArray("animation") groups=["jugador"]]
 script = ExtResource("1_cuyo6")
 animation = NodePath("AnimatedSprite2D")
 
