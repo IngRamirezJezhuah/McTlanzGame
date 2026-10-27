@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 @export var animation: AnimatedSprite2D 
 var _speed: float = 100.0
-var _jump_speed = -200.0
+var _jump_speed = -300.0
 
 @export var salud_max: float = 100
 @export var tiempo_invulnerabilidad: float = 0.5
@@ -76,10 +76,16 @@ func _physics_process(delta):
 		velocity.x = _velocidad_de_caida.x
 	elif Input.is_action_pressed("rigth"):
 		animation.flip_h = false
-		velocity.x = _speed
+		if Input.is_action_pressed(("Shift")):
+			velocity.x = _speed * 2
+		else:
+			velocity.x = _speed
 	elif Input.is_action_pressed("left"):
 		animation.flip_h = true
-		velocity.x = -_speed
+		if Input.is_action_pressed(("Shift")):
+			velocity.x = - _speed * 2
+		else:
+			velocity.x = - _speed
 	else:
 		velocity.x = 0
 	# ============================
@@ -99,7 +105,9 @@ func _physics_process(delta):
 	# =======================
 	if !is_on_floor():
 		animation.play("jump")
-	elif velocity.x != 0:
+	elif velocity.x <= 100.0 && velocity.x >= -100 && velocity.x !=0:
+		animation.play("walk")
+	elif velocity.x <= 200.0 && velocity.x >= -200 && velocity.x !=0:
 		animation.play("run")
 	else:
 		animation.play("idle")
