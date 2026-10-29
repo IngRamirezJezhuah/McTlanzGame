@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://blxc3wkn2201"]
+
+[ext_resource type="Script" uid="uid://67du1w22b8w6" path="res://Scripts/macro_recorder.gd" id="1_wjayd"]
+[ext_resource type="AudioStream" uid="uid://b4008ky4xwqse" path="res://Audio/1280936_i9incher---Drift.mp3" id="2_toclf"]
+
+[node name="LevelEditor" type="Node2D" unique_id=1084586378]
+
+[node name="Recorder" type="Node" parent="." unique_id=1964488840]
+script = ExtResource("1_wjayd")
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="Recorder" unique_id=1463682370]
+stream = ExtResource("2_toclf")
+
+[node name="macro_display" type="Label" parent="Recorder" unique_id=1240807056]
+offset_left = -541.0
+offset_top = -283.0
+offset_right = -221.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(1, 0.6784314, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "Fancy Macro Debugger"
+vertical_alignment = 2
+
+[node name="macro_display" type="Label" parent="Recorder/macro_display" unique_id=768234925]
+layout_mode = 0
+offset_left = 638.0
+offset_top = -23.0
+offset_right = 1089.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(1, 0.6784314, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "Space: Toggle player.
+Left/Right arrows: Move 1 frame
+Ctrl/Shift: Write a new macro"
+horizontal_alignment = 2
+
+[node name="bgmslider" type="HSlider" parent="Recorder" unique_id=2014910217]
+offset_left = -552.0
+offset_top = 264.0
+offset_right = 550.0
+offset_bottom = 306.0
+
+[node name="LineEdit" type="LineEdit" parent="Recorder" unique_id=2016248616]
+offset_left = 152.0
+offset_top = 232.0
+offset_right = 472.0
+offset_bottom = 267.0
+focus_mode = 1
+placeholder_text = "Write level name here"
+select_all_on_focus = true
+caret_blink = true
+
+[node name="levelMessage" type="Label" parent="Recorder" unique_id=186179570]
+offset_left = 152.0
+offset_top = 192.0
+offset_right = 424.0
+offset_bottom = 231.0
+theme_override_font_sizes/font_size = 24
+text = "Press enter to leave this text."
+
+[node name="file_ext" type="Label" parent="Recorder" unique_id=1804221071]
+offset_left = 480.0
+offset_top = 232.0
+offset_right = 544.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 24
+text = ".json"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1973484580]
