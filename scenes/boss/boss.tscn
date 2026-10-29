@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c15g00payv1i2"]
+
+[ext_resource type="Script" uid="uid://btwcwnix0v7fo" path="res://scenes/boss/boss.gd" id="1_6xxrv"]
+[ext_resource type="Texture2D" uid="uid://bgitwconoplu1" path="res://Assets/characters/boss/test.png" id="2_8ftqf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atjq5"]
+atlas = ExtResource("2_8ftqf")
+region = Rect2(0, 0, 288, 224)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gchkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atjq5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pi5kt"]
+radius = 24.0
+height = 66.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gchkv"]
+radius = 45.01111
+
+[node name="Boss" type="CharacterBody2D" unique_id=232252331]
+script = ExtResource("1_6xxrv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1198674867]
+position = Vector2(0, 1)
+scale = Vector2(0.23629631, 0.1833449)
+sprite_frames = SubResource("SpriteFrames_gchkv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=182395732]
+shape = SubResource("CapsuleShape2D_pi5kt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1724292446]
+position = Vector2(-2.895, 35.988)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=811439911]
+position = Vector2(3, -36)
+shape = SubResource("CircleShape2D_gchkv")

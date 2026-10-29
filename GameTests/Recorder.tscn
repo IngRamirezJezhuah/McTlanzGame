@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://blxc3wkn2201"]
 
-[ext_resource type="Script" uid="uid://67du1w22b8w6" path="res://Scripts/macro_recorder.gd" id="1_uqaf5"]
-[ext_resource type="AudioStream" uid="uid://b4008ky4xwqse" path="res://Audio/1280936_i9incher---Drift.mp3" id="2_780f2"]
+[ext_resource type="Script" uid="uid://67du1w22b8w6" path="res://Scripts/macro_recorder.gd" id="1_wjayd"]
+[ext_resource type="AudioStream" uid="uid://b4008ky4xwqse" path="res://Audio/1280936_i9incher---Drift.mp3" id="2_toclf"]
 
 [node name="LevelEditor" type="Node2D" unique_id=1084586378]
 
 [node name="Recorder" type="Node" parent="." unique_id=1964488840]
-script = ExtResource("1_uqaf5")
+script = ExtResource("1_wjayd")
 
 [node name="bgm" type="AudioStreamPlayer2D" parent="Recorder" unique_id=1463682370]
-stream = ExtResource("2_780f2")
+stream = ExtResource("2_toclf")
 
 [node name="macro_display" type="Label" parent="Recorder" unique_id=1240807056]
 offset_left = -541.0

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://drl3xb1mc6igo"]
+
+[ext_resource type="PackedScene" uid="uid://c15g00payv1i2" path="res://scenes/boss/boss.tscn" id="1_myxyc"]
+[ext_resource type="PackedScene" uid="uid://dus6nonjh5458" path="res://scenes/character/character.tscn" id="2_hbash"]
+[ext_resource type="Texture2D" uid="uid://de5e47f4awp6g" path="res://Assets/NieR-Automata-Engels.jpg" id="3_2nm7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gp8j"]
+size = Vector2(543, 16)
+
+[node name="Scene" type="Node2D" unique_id=691871752]
+
+[node name="Boss" parent="." unique_id=232252331 instance=ExtResource("1_myxyc")]
+position = Vector2(-1, -86)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1165165254]
+
+[node name="Suelo" type="CollisionShape2D" parent="StaticBody2D" unique_id=1549753553]
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=461760318]
+position = Vector2(0, -116)
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="Lateral_Izq" type="CollisionShape2D" parent="StaticBody2D" unique_id=1451906008]
+position = Vector2(-250, -68)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="LateralDerch" type="CollisionShape2D" parent="StaticBody2D" unique_id=1100003251]
+position = Vector2(250, -71.685)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_1gp8j")
+
+[node name="Character" parent="." unique_id=1822747746 instance=ExtResource("2_hbash")]
+texture_filter = 1
+position = Vector2(1, -33)
+
+[node name="Camera2D" type="Camera2D" parent="Character" unique_id=1612793087]
+visible = false
+position = Vector2(-1, -23.43)
+zoom = Vector2(4.815, 5.34)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1981712680]
+z_index = -1
+texture_filter = 1
+position = Vector2(15.000002, -73)
+scale = Vector2(0.48611107, 0.26311725)
+texture = ExtResource("3_2nm7q")
